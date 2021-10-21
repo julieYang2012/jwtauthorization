@@ -1,0 +1,1 @@
+keytool -genkey -alias auth -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore authKeyStore.jks -validity 365000 -dname "C=CA, ST=Ontario, L=Toronto, O=Xenex Enterprises Inc., OU=Xenex, CN=xenex.cloud, emailAddress=info@xenex.ca"
