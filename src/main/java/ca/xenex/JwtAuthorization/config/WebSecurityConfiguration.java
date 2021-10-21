@@ -31,8 +31,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Bean
     PasswordEncoder passwordEncoder() {
-       // return new BCryptPasswordEncoder();
-    	return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
+    	// return NoOpPasswordEncoder.getInstance();
     	// handles a few of password encoders and delegates based on a prefix, example password saved in DB with prefix {bcrypt} or {noop}Joe707.
         //return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
