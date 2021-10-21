@@ -52,16 +52,18 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-    	httpSecurity.cors().and().csrf()
-    	.disable()
-        .authorizeRequests()
-        .antMatchers("/jwk-set")
-        .permitAll()
-        .anyRequest()
-        .authenticated()
-        .and()
-        .sessionManagement()
-        .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+    	httpSecurity
+//	    	.cors().and()
+	    	.csrf()
+	    		.disable()
+	        .authorizeRequests()
+	        .antMatchers("/jwk-set")
+	        	.permitAll()
+	        .anyRequest()
+	        	.authenticated()
+	        .and()
+	        .sessionManagement()
+	        .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
